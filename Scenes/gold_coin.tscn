@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://2o0udixtb452"]
+
+[ext_resource type="Script" uid="uid://bkgddmsnt8vox" path="res://Scripts/gold_coin.gd" id="1_13x2q"]
+[ext_resource type="PackedScene" uid="uid://cshmpk65hq3e2" path="res://KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/coin.gltf" id="1_d4s43"]
+[ext_resource type="Script" uid="uid://dkcfstmehseva" path="res://Scripts/coin.gd" id="2_ev4ma"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_nir8g"]
+radius = 0.20040286
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ev4ma"]
+radius = 0.30342615
+
+[node name="GoldCoin" type="RigidBody3D" unique_id=630932801]
+script = ExtResource("1_13x2q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1157946473]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010697246, 0, -0.008030653)
+shape = SubResource("SphereShape3D_nir8g")
+
+[node name="coin2" parent="." unique_id=1622792651 instance=ExtResource("1_d4s43")]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0.015977383, 0, -0.011292577)
+script = ExtResource("2_ev4ma")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1080769642]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1540364720]
+shape = SubResource("SphereShape3D_ev4ma")

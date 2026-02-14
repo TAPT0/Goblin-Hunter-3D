@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bo5sjoxbwkfb0"]
+
+[ext_resource type="Script" uid="uid://v31b6rwbpwmn" path="res://Scripts/crate.gd" id="1_i4r3v"]
+[ext_resource type="PackedScene" uid="uid://1w363vfnphml" path="res://Scenes/debris_chunk.tscn" id="2_rdp7h"]
+[ext_resource type="Material" uid="uid://ctwfcts0dxyx6" path="res://wood/Mat_WoodCrate.tres" id="3_rdp7h"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l7th0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_sh37k"]
+
+[node name="Crate" type="StaticBody3D" unique_id=1414261289 groups=["Enemy"]]
+script = ExtResource("1_i4r3v")
+debris_scene = ExtResource("2_rdp7h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1649164820]
+shape = SubResource("BoxShape3D_l7th0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1673144354 groups=["Enemy", "enemy"]]
+mesh = SubResource("BoxMesh_sh37k")
+surface_material_override/0 = ExtResource("3_rdp7h")

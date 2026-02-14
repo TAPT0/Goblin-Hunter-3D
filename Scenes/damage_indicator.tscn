@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c4u2iciem1qwk"]
+
+[ext_resource type="Script" uid="uid://djvxvblkf3gcl" path="res://Scripts/damage_indicator.gd" id="1_mbbgf"]
+
+[node name="DamageIndicator" type="Label3D" unique_id=81796195]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22211826, 0)
+billboard = 1
+no_depth_test = true
+modulate = Color(0.8033643, 0, 0.09589789, 1)
+text = "50"
+font_size = 64
+outline_size = 10
+script = ExtResource("1_mbbgf")
+
+[node name="Timer" type="Timer" parent="." unique_id=1033531934]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

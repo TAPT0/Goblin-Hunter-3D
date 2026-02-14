@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://1w363vfnphml"]
+
+[ext_resource type="Material" uid="uid://ctwfcts0dxyx6" path="res://wood/Mat_WoodCrate.tres" id="1_8ej8s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yf3cw"]
+size = Vector3(0.2, 0.2, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8ej8s"]
+size = Vector3(0.2, 0.2, 0.2)
+
+[node name="DebrisChunk" type="RigidBody3D" unique_id=1849329094]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.116253674, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1842735846]
+shape = SubResource("BoxShape3D_yf3cw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1459158039]
+mesh = SubResource("BoxMesh_8ej8s")
+surface_material_override/0 = ExtResource("1_8ej8s")

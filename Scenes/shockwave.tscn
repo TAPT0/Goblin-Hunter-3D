@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dr5w28s3wl8ci"]
+
+[ext_resource type="Script" uid="uid://pa2vmpc25qnt" path="res://Scripts/shockwave.gd" id="1_rhd1y"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_eml1m"]
+spread = 180.0
+initial_velocity_min = 10.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uj01u"]
+albedo_color = Color(0.12005251, 0.5893727, 0.68454957, 1)
+emission_enabled = true
+emission = Color(0.015250854, 0.5136159, 0.58350515, 1)
+emission_energy_multiplier = 5.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_s7y0c"]
+material = SubResource("StandardMaterial3D_uj01u")
+size = Vector3(0.2, 0.2, 0.2)
+
+[node name="Shockwave" type="GPUParticles3D" unique_id=941957066]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.11101532, 0)
+amount = 30
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_eml1m")
+draw_pass_1 = SubResource("BoxMesh_s7y0c")
+script = ExtResource("1_rhd1y")

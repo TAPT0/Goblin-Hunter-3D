@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b0euglif5t6hs"]
+
+[ext_resource type="Script" uid="uid://bo4oh35l1rw2c" path="res://Scripts/upgrade_shrine.gd" id="1_hei5m"]
+[ext_resource type="PackedScene" uid="uid://d0j4gmywltjn7" path="res://KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/pillar_decorated.gltf" id="1_nwlcx"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_hei5m"]
+height = 2.762207
+radius = 0.61035156
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_nwlcx"]
+height = 2.779541
+radius = 0.9589844
+
+[node name="UpgradeShrine" type="StaticBody3D" unique_id=2132389540]
+script = ExtResource("1_hei5m")
+
+[node name="pillar_decorated2" parent="." unique_id=1135217692 instance=ExtResource("1_nwlcx")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1235489873]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4125953, 0)
+shape = SubResource("CylinderShape3D_hei5m")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1341823442]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1101213235]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3780403, 0)
+shape = SubResource("CylinderShape3D_nwlcx")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=2087484466]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.33594823, 0.67363167)
+text = "Damage Up\\n50 Gold"

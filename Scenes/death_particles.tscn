@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b0xpvnvo5wa3o"]
+
+[ext_resource type="Script" uid="uid://q6fwqnbiwh6w" path="res://Scripts/death_particles.gd" id="1_nkpam"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bgjd5"]
+spread = 180.0
+initial_velocity_min = 5.0
+initial_velocity_max = 10.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nkpam"]
+albedo_color = Color(1, 0.1254902, 0.13333334, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_55cjx"]
+material = SubResource("StandardMaterial3D_nkpam")
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="DeathParticles" type="GPUParticles3D" unique_id=1492076397]
+emitting = false
+amount = 20
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_bgjd5")
+draw_pass_1 = SubResource("BoxMesh_55cjx")
+script = ExtResource("1_nkpam")
