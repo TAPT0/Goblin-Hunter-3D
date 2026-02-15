@@ -4,6 +4,7 @@ hello everyone this is my game project i made in Godot Engine. its a 3d action r
 
 About the Game:
 u play as a warrior with sword. there is a Mage NPC who gives quest to kill goblins. if u kill them u get Gold and can buy potions (shop is working now).
+goblins only spawn at night you might have to wait for a couple of minutes
 
 Features i added:
 
