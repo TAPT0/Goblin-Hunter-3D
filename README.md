@@ -1,4 +1,4 @@
-# Goblin-Hunter-3D
+# Goblin-Hunter-3D [GOBLINS ONLY SPAWN AT NIGHT]
 
 hello everyone this is my game project i made in Godot Engine. its a 3d action rpg where u have to save village from goblins. i work hard on the combat system so plz check it out.
 
