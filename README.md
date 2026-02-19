@@ -39,4 +39,3 @@ E = Interact (Talk to NPC)
 F = Torch light on/off
 Esc = Pause game
 
-plz play and tell me if bugs. thanks.
